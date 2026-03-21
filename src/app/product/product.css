@@ -1,0 +1,36 @@
+/* ===== eFlip Product Page ===== */
+
+/* Dark page header */
+.products-page-header {
+  padding: 60px 0 30px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(124,58,237,0.08) 0%, transparent 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 20px;
+}
+
+.products-page-header h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #a78bfa, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.products-page-header p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* Tight card grid */
+.container {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.row {
+  gap: 0;
+}

@@ -1,0 +1,129 @@
+/* ===== eFlip Premium Navbar ===== */
+
+/* Glassmorphism dark navbar */
+.glass-navbar {
+  background: rgba(8, 11, 26, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+  padding: 14px 0;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.glass-navbar.scrolled {
+  background: rgba(8, 11, 26, 0.95);
+  box-shadow: 0 4px 30px rgba(124, 58, 237, 0.2);
+}
+
+/* Gradient logo text */
+.logo-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #a78bfa, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none !important;
+  transition: filter 0.3s;
+}
+
+.logo-text:hover {
+  filter: brightness(1.2);
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  font-family: 'Outfit', sans-serif;
+  margin: 0 4px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary, #94a3b8) !important;
+  padding: 8px 16px;
+  border-radius: 30px;
+  position: relative;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+/* Glowing hover pill */
+.fancy-link:hover {
+  color: #fff !important;
+  background: rgba(124, 58, 237, 0.25);
+  box-shadow: 0 0 18px rgba(124, 58, 237, 0.35);
+}
+
+/* Active link */
+.fancy-link.active-link {
+  color: #a78bfa !important;
+}
+
+/* Toggler for dark theme */
+.navbar-toggler {
+  border: 1px solid rgba(124, 58, 237, 0.4) !important;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* CTA Shop Button */
+.shop-btn {
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  border: none;
+  color: white;
+  padding: 9px 22px;
+  border-radius: 30px;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.35);
+}
+
+.shop-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.55);
+}
+
+/* Cart icon button */
+.cart-icon-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 50%;
+  color: #a78bfa;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cart-icon-btn:hover {
+  background: rgba(124, 58, 237, 0.3);
+  box-shadow: 0 0 16px rgba(124, 58, 237, 0.45);
+  color: #fff;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: linear-gradient(135deg, #f59e0b, #fcd34d);
+  color: #080b1a;
+  font-size: 10px;
+  font-weight: 800;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #080b1a;
+  animation: glow-pulse 2s ease-in-out infinite;
+}

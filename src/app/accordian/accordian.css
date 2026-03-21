@@ -1,0 +1,115 @@
+/* ===== eFlip Premium Accordion — Why Choose eFlip ===== */
+
+.info-section {
+  max-width: 860px;
+  margin: 70px auto;
+  padding: 0 20px;
+}
+
+/* Section title */
+.section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 48px;
+  background: linear-gradient(135deg, #a78bfa, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Each details panel */
+details {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 14px;
+  margin-bottom: 14px;
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+details:hover {
+  transform: translateY(-3px);
+  border-color: rgba(124, 58, 237, 0.35);
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.15);
+}
+
+details[open] {
+  border-color: rgba(124, 58, 237, 0.5);
+  box-shadow: 0 8px 40px rgba(124, 58, 237, 0.2);
+}
+
+/* Summary header */
+summary {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding: 20px 52px 20px 22px;
+  color: #e2e8f0;
+  transition: color 0.3s ease;
+}
+
+/* Remove default marker */
+summary::-webkit-details-marker { display: none; }
+
+/* Gold accent on hover / open */
+details:hover summary,
+details[open] summary {
+  color: #a78bfa;
+}
+
+/* Arrow icon */
+summary::after {
+  content: '▼';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: #7c3aed;
+  transition: transform 0.35s ease;
+}
+
+details[open] summary::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Left accent bar when open */
+details[open] summary::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #7c3aed, #f59e0b);
+  border-radius: 0 2px 2px 0;
+}
+
+/* Content */
+.ctn-info {
+  padding: 0 22px 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ctn-info h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 16px 0 8px;
+  color: #f59e0b;
+}
+
+.ctn-info p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #94a3b8;
+  margin: 0;
+}

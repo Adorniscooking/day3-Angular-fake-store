@@ -1,0 +1,18 @@
+<div class="products-page-header">
+  <h1>Our Products</h1>
+  <p>Browse our curated collection of premium items</p>
+</div>
+
+<div class="container mt-2">
+  <div class="row">
+
+    @for (item of products; track item.id) {
+
+      <div class="col-md-4 col-lg-3 mb-4">
+        <app-card [products]="item"></app-card>
+      </div>
+
+    }
+
+  </div>
+</div>

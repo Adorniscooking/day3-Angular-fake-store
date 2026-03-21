@@ -1,0 +1,126 @@
+/* ===== eFlip Premium Dark Theme — Global Styles ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Outfit:wght@300;400;600;700&display=swap');
+
+/* ===== Design Tokens ===== */
+:root {
+  /* Colors */
+  --primary:        #7c3aed;      /* Violet */
+  --primary-light:  #a78bfa;      /* Light violet */
+  --primary-dark:   #5b21b6;      /* Deep violet */
+  --gold:           #f59e0b;      /* Gold accent */
+  --gold-light:     #fcd34d;      /* Light gold */
+  --secondary:      #06b6d4;      /* Cyan */
+  --success:        #10b981;      /* Emerald */
+  --danger:         #f43f5e;      /* Rose */
+
+  /* Dark Theme Backgrounds */
+  --bg-base:        #080b1a;      /* Deep dark navy */
+  --bg-surface:     #0f1528;      /* Card/panel surface */
+  --bg-elevated:    #1a1f3a;      /* Elevated components */
+  --bg-glass:       rgba(255, 255, 255, 0.04);
+  --bg-glass-hover: rgba(255, 255, 255, 0.08);
+
+  /* Text */
+  --text-primary:   #f1f5f9;      /* Main text */
+  --text-secondary: #94a3b8;      /* Muted text */
+  --text-muted:     #64748b;      /* Very muted */
+
+  /* Borders */
+  --border-glass:   rgba(255, 255, 255, 0.08);
+  --border-glow:    rgba(124, 58, 237, 0.5);
+
+  /* Legacy aliases (keep existing components working) */
+  --dark:           #080b1a;
+  --light:          #f1f5f9;
+  --text-main:      #f1f5f9;
+
+  /* Shadows */
+  --shadow-sm:  0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-md:  0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-lg:  0 20px 60px rgba(0, 0, 0, 0.6);
+  --shadow-violet: 0 8px 32px rgba(124, 58, 237, 0.35);
+  --shadow-gold:   0 8px 32px rgba(245, 158, 11, 0.3);
+
+  /* Typography */
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-base:    'Outfit', sans-serif;
+
+  /* Gradients */
+  --gradient-primary:  linear-gradient(135deg, #7c3aed, #a78bfa);
+  --gradient-gold:     linear-gradient(135deg, #f59e0b, #fcd34d);
+  --gradient-hero:     linear-gradient(135deg, #080b1a 0%, #1a0a3e 50%, #0d1535 100%);
+
+  /* Spacing */
+  --radius-sm:  8px;
+  --radius-md:  14px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+}
+
+/* ===== Base Reset ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--bg-base);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(124, 58, 237, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 100%, rgba(6, 182, 212, 0.08) 0%, transparent 60%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: rgba(124, 58, 237, 0.35);
+  color: #fff;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--primary-light); }
+
+/* ===== Shared Animations ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(124, 58, 237, 0.4); }
+  50%       { box-shadow: 0 0 28px rgba(124, 58, 237, 0.8); }
+}
+
+/* ===== Gradient Text Utility ===== */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-light), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
